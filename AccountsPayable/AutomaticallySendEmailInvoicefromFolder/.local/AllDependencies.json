@@ -1130,9 +1130,9 @@
     "restore": {
       "projectUniqueName": "ReadingFromFolder",
       "projectName": "ReadingFromFolder",
-      "projectPath": "F:\\git\\cAIpableDemoW2\\cAIpableDemoW2\\AutomaticallySendEmailInvoicefromFolder\\.local",
+      "projectPath": "F:\\git\\cAIpableDemoW3\\AccountsPayable\\AutomaticallySendEmailInvoicefromFolder\\.local",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "F:\\git\\cAIpableDemoW2\\cAIpableDemoW2\\AutomaticallySendEmailInvoicefromFolder\\.local"
+      "outputPath": "F:\\git\\cAIpableDemoW3\\AccountsPayable\\AutomaticallySendEmailInvoicefromFolder\\.local"
     },
     "frameworks": {
       "net461": {
