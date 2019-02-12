@@ -422,10 +422,11 @@
   },
   "libraries": {
     "AvalonEdit/5.0.3": {
-      "sha512": "L5CgXRniZRxI/tjoBztVgZnvTL1F/qKrRJa+Q88I0Gl78WRNaqdMkuOlkAsOHTauBGZSQNDO0/X+xIpzfzmLdQ==",
+      "sha512": "O7qf3H3SP2VrQujwmzvb3hJ+lw4rNWcZkpMH8T0qb/cA1UccoJIZ9qL/+DM7bws9l8Hxnyk7GUYVFrCSZeH+uA==",
       "type": "package",
       "path": "avalonedit/5.0.3",
       "files": [
+        ".signature.p7s",
         "avalonedit.5.0.3.nupkg.sha512",
         "avalonedit.nuspec",
         "lib/Net35/ICSharpCode.AvalonEdit.dll",
@@ -446,10 +447,11 @@
       ]
     },
     "Caliburn.Micro/3.0.1": {
-      "sha512": "6RaRnvbHnwm2kx9N+xyI6+qCLDJaAGsV1JgKlQ2QWApYNinpqO1GglwZdCWQ6eWj0var+XjbM8V7NYqB/C1elg==",
+      "sha512": "34GUogBL8tS1rWCSugKwaOdmZZz162JC0K3HCSPuSlkCZwA1zDTspUp7owXigOjliCSiBzP1ltBFMWpLxs9BtQ==",
       "type": "package",
       "path": "caliburn.micro/3.0.1",
       "files": [
+        ".signature.p7s",
         "caliburn.micro.3.0.1.nupkg.sha512",
         "caliburn.micro.nuspec",
         "lib/MonoAndroid10/Caliburn.Micro.Platform.Core.dll",
@@ -508,10 +510,11 @@
       ]
     },
     "Caliburn.Micro.Core/3.0.1": {
-      "sha512": "CZPp0HVaHiW/N6JGsXpyJXnoyVRhFMY+H2uZcD24oNPczLOX1WuWsyVrSdagqUhjZnP1wV42Y6PkIUXEWWgOCg==",
+      "sha512": "rYCObUe1g/ks4kTEPMFc4yFShYWkL6P5sfUsJOPGSKPXCsnKXL0XaclU3XGWAHBeNTPBgJO9pJBfMBcaq3iyRg==",
       "type": "package",
       "path": "caliburn.micro.core/3.0.1",
       "files": [
+        ".signature.p7s",
         "caliburn.micro.core.3.0.1.nupkg.sha512",
         "caliburn.micro.core.nuspec",
         "lib/net40/Caliburn.Micro.XML",
@@ -633,10 +636,11 @@
       ]
     },
     "Microsoft.Rest.ClientRuntime/2.3.10": {
-      "sha512": "JO9CzV1hvjtrIzq06gJ5nNv7GV24Xz3Y3O9vx7fCe7ndNA0NmD3fZ9JUgFir2UvJ2/+9vvCo/6RXjyfywvQQIw==",
+      "sha512": "a30J6t7LRkYx974tLaRnJc/dYZ1M7uhc5vdgULxdhL7HJNJydG7e+jyAVD15gK+vFR1i9MH+5Ch9t1zhb/Lp1g==",
       "type": "package",
       "path": "microsoft.rest.clientruntime/2.3.10",
       "files": [
+        ".signature.p7s",
         "lib/net452/Microsoft.Rest.ClientRuntime.dll",
         "lib/net452/Microsoft.Rest.ClientRuntime.runtimeconfig.json",
         "lib/net452/Microsoft.Rest.ClientRuntime.xml",
@@ -686,10 +690,11 @@
       ]
     },
     "NPOI/2.4.1": {
-      "sha512": "85790/CY9z4DCU1KLpcdLSqaqaqmQOenTqXJfcsYK8LIKNAAoTgjT5LYLbORgdwAd63sbaJiCfB1SIn/dAXrJw==",
+      "sha512": "k6KgsGWQpODQcIo7SwTw4j0be6qILTQlk7xKMEPQjp1Bz3+YaUZSvQ/ePG5vcLKnzGDgGGN1TccvYccmrZU53g==",
       "type": "package",
       "path": "npoi/2.4.1",
       "files": [
+        ".signature.p7s",
         "LICENSE",
         "Read Me.txt",
         "lib/NPOI.xml",
@@ -718,10 +723,11 @@
       ]
     },
     "SharpZipLib/1.0.0": {
-      "sha512": "YuYztmY3jEb21F6e5LIPHJjApdtzdCPQ284UzsCKNfkgW71bukFHJES6RbKi+wm053XzFg0LX5/2vj/9gl8F/g==",
+      "sha512": "38egGevtPMQn/6olZZUteKUC7+BD47LdCGKo9Vyj17+HWDwiqPXsyJu55q9WSybhwVKwt0q2FLhiuJjZfQpsHw==",
       "type": "package",
       "path": "sharpziplib/1.0.0",
       "files": [
+        ".signature.p7s",
         "lib/net45/ICSharpCode.SharpZipLib.dll",
         "lib/net45/ICSharpCode.SharpZipLib.xml",
         "lib/netstandard2.0/ICSharpCode.SharpZipLib.dll",
@@ -985,9 +991,9 @@
     "restore": {
       "projectUniqueName": "PDFReader-DemoCompany",
       "projectName": "PDFReader-DemoCompany",
-      "projectPath": "F:\\git\\cAIpableDemoW3\\AccountsPayable\\PDFReaders\\PDFReader-DemoCompany\\.local",
+      "projectPath": "C:\\git\\cAIpableDemoW3\\AccountsPayable\\PDFReaders\\PDFReader-DemoCompany\\.local",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "F:\\git\\cAIpableDemoW3\\AccountsPayable\\PDFReaders\\PDFReader-DemoCompany\\.local"
+      "outputPath": "C:\\git\\cAIpableDemoW3\\AccountsPayable\\PDFReaders\\PDFReader-DemoCompany\\.local"
     },
     "frameworks": {
       "net461": {
