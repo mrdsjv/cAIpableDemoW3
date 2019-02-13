@@ -1,5 +1,7 @@
 UsernameForOnBoardClientRegistration: dev.accountspayable@caipable.com
 PasswordForOnBoardClientRegistration: a#j9Nldv%cIJ
+TrelloUserName: thinley.jamtsho.mr@gmail.com
+TrelloPassword: 9uFu7Y14*4qt
 ClientID: 540714922796-i5mcsleps3cqvp7lc14htjfd98nbtne5.apps.googleusercontent.com
 ClientSecret: xo9a7uPu0uCorBXBojcxGVUl
 SpreadSheetID: 1LgvGFPeFuIU9bJvFWLypbGg_e0wVEtelz8qvaxqjxTE
