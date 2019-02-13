@@ -1,0 +1,6 @@
+UsernameForOnBoardClientRegistration:  caipablec@gmail.com
+PasswordForOnBoardClientRegistration: qF9JICr7G79
+ClientID: 540714922796-i5mcsleps3cqvp7lc14htjfd98nbtne5.apps.googleusercontent.com
+ClientSecret: xo9a7uPu0uCorBXBojcxGVUl
+SpreadSheetID: 1LgvGFPeFuIU9bJvFWLypbGg_e0wVEtelz8qvaxqjxTE
+

@@ -422,11 +422,10 @@
   },
   "libraries": {
     "AvalonEdit/5.0.3": {
-      "sha512": "O7qf3H3SP2VrQujwmzvb3hJ+lw4rNWcZkpMH8T0qb/cA1UccoJIZ9qL/+DM7bws9l8Hxnyk7GUYVFrCSZeH+uA==",
+      "sha512": "L5CgXRniZRxI/tjoBztVgZnvTL1F/qKrRJa+Q88I0Gl78WRNaqdMkuOlkAsOHTauBGZSQNDO0/X+xIpzfzmLdQ==",
       "type": "package",
       "path": "avalonedit/5.0.3",
       "files": [
-        ".signature.p7s",
         "avalonedit.5.0.3.nupkg.sha512",
         "avalonedit.nuspec",
         "lib/Net35/ICSharpCode.AvalonEdit.dll",
@@ -447,11 +446,10 @@
       ]
     },
     "Caliburn.Micro/3.0.1": {
-      "sha512": "34GUogBL8tS1rWCSugKwaOdmZZz162JC0K3HCSPuSlkCZwA1zDTspUp7owXigOjliCSiBzP1ltBFMWpLxs9BtQ==",
+      "sha512": "6RaRnvbHnwm2kx9N+xyI6+qCLDJaAGsV1JgKlQ2QWApYNinpqO1GglwZdCWQ6eWj0var+XjbM8V7NYqB/C1elg==",
       "type": "package",
       "path": "caliburn.micro/3.0.1",
       "files": [
-        ".signature.p7s",
         "caliburn.micro.3.0.1.nupkg.sha512",
         "caliburn.micro.nuspec",
         "lib/MonoAndroid10/Caliburn.Micro.Platform.Core.dll",
@@ -510,11 +508,10 @@
       ]
     },
     "Caliburn.Micro.Core/3.0.1": {
-      "sha512": "rYCObUe1g/ks4kTEPMFc4yFShYWkL6P5sfUsJOPGSKPXCsnKXL0XaclU3XGWAHBeNTPBgJO9pJBfMBcaq3iyRg==",
+      "sha512": "CZPp0HVaHiW/N6JGsXpyJXnoyVRhFMY+H2uZcD24oNPczLOX1WuWsyVrSdagqUhjZnP1wV42Y6PkIUXEWWgOCg==",
       "type": "package",
       "path": "caliburn.micro.core/3.0.1",
       "files": [
-        ".signature.p7s",
         "caliburn.micro.core.3.0.1.nupkg.sha512",
         "caliburn.micro.core.nuspec",
         "lib/net40/Caliburn.Micro.XML",
@@ -636,11 +633,10 @@
       ]
     },
     "Microsoft.Rest.ClientRuntime/2.3.10": {
-      "sha512": "a30J6t7LRkYx974tLaRnJc/dYZ1M7uhc5vdgULxdhL7HJNJydG7e+jyAVD15gK+vFR1i9MH+5Ch9t1zhb/Lp1g==",
+      "sha512": "JO9CzV1hvjtrIzq06gJ5nNv7GV24Xz3Y3O9vx7fCe7ndNA0NmD3fZ9JUgFir2UvJ2/+9vvCo/6RXjyfywvQQIw==",
       "type": "package",
       "path": "microsoft.rest.clientruntime/2.3.10",
       "files": [
-        ".signature.p7s",
         "lib/net452/Microsoft.Rest.ClientRuntime.dll",
         "lib/net452/Microsoft.Rest.ClientRuntime.runtimeconfig.json",
         "lib/net452/Microsoft.Rest.ClientRuntime.xml",
@@ -983,15 +979,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DataScientists\\.nuget\\packages\\": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "LaunchingCaipablePseudocode",
-      "projectName": "LaunchingCaipablePseudocode",
-      "projectPath": "C:\\git\\cAIpableDemoW3\\LaunchingCaipablePseudocode\\.local",
-      "packagesPath": "C:\\Users\\DataScientists\\.nuget\\packages\\",
-      "outputPath": "C:\\git\\cAIpableDemoW3\\LaunchingCaipablePseudocode\\.local"
+      "projectUniqueName": "Merging Three Excel data_s to a single Excel sheet",
+      "projectName": "Merging Three Excel data_s to a single Excel sheet",
+      "projectPath": "C:\\Users\\DELL\\Desktop\\Merging Three Excel data_s to a single Excel sheet\\.local",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DELL\\Desktop\\Merging Three Excel data_s to a single Excel sheet\\.local"
     },
     "frameworks": {
       "net461": {

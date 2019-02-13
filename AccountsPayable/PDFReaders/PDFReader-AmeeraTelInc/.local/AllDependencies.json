@@ -1048,14 +1048,18 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {}
+    "C:\\Users\\DataScientists\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "PDFReader-AmeeraTelInc",
       "projectName": "PDFReader-AmeeraTelInc",
       "projectPath": "C:\\git\\cAIpableDemoW3\\AccountsPayable\\PDFReaders\\PDFReader-AmeeraTelInc\\.local",
+<<<<<<< HEAD
+      "packagesPath": "C:\\Users\\DataScientists\\.nuget\\packages\\",
+=======
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+>>>>>>> 9b85748392fe1e00f32d26b89b45f063a6e249de
       "outputPath": "C:\\git\\cAIpableDemoW3\\AccountsPayable\\PDFReaders\\PDFReader-AmeeraTelInc\\.local"
     },
     "frameworks": {
