@@ -1,8 +1,0 @@
-Company Name: AmeeraTel Inc.
-Invoice Number: INV-190030
-Invoice Date: 25 Jan 2019
-Due Date: 01 Feb 2019
-Description: Seat Lease February 1-28, 2019
-Qty: 5
-Rate: 150
-Total: 750
