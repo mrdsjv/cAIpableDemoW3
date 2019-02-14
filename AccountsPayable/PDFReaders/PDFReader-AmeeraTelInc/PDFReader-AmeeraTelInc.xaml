@@ -88,7 +88,7 @@
               <OutArgument x:TypeArguments="s:String[]">[path]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="s:String[]">[directory.GetFiles("Invoices")]</InArgument>
+              <InArgument x:TypeArguments="s:String[]">[directory.GetFiles("C:\git\cAIpableDemoW3\AccountsPayable\PDFReaders\PDFReader-AmeeraTelInc\Invoices")]</InArgument>
             </Assign.Value>
           </Assign>
           <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Check all the files in folder" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[path]">
@@ -112,19 +112,19 @@
                     </ui:GetValue.Value>
                   </ui:GetValue>
                   <WriteLine DisplayName="Write Line" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[CompanyName]" />
-                  <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get Invoice Number" sap2010:WorkflowViewState.IdRef="GetOCRText_3">
+                  <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'document'" sap2010:WorkflowViewState.IdRef="GetOCRText_6">
                     <ui:GetOCRText.OCREngine>
                       <ActivityFunc x:TypeArguments="sd2:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
                         <ActivityFunc.Argument>
                           <DelegateInArgument x:TypeArguments="sd2:Image" Name="Image" />
                         </ActivityFunc.Argument>
-                        <ui:GoogleOCR FilterRegion="{x:Null}" Text="{x:Null}" AllowedCharacters="" DeniedCharacters="" ExtractWords="False" sap2010:WorkflowViewState.IdRef="GoogleOCR_3" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="6" />
+                        <ui:GoogleOCR FilterRegion="{x:Null}" Text="{x:Null}" AllowedCharacters="" DeniedCharacters="" ExtractWords="False" sap2010:WorkflowViewState.IdRef="GoogleOCR_6" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="4" />
                       </ActivityFunc>
                     </ui:GetOCRText.OCREngine>
                     <ui:GetOCRText.Target>
-                      <ui:Target Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f0efa0edc5f73bcda1eb240c6dcaf4a3" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='AmeeraTelInc.pdf - Adobe Reader' /&gt;&lt;wnd cls='AVL_AVView' title='AVScrollView' /&gt;&lt;ctrl role='document' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="cf0b551b2cd0e6d16b1cdff447ae9169" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='AmeeraTelInc.pdf - Adobe Reader' /&gt;&lt;wnd cls='AVL_AVView' title='AVScrollView' /&gt;&lt;ctrl role='document' /&gt;" WaitForReady="INTERACTIVE">
                         <ui:Target.ClippingRegion>
-                          <ui:Region Rectangle="542, 40, 66, 17" />
+                          <ui:Region Rectangle="556, 39, 67, 20" />
                         </ui:Target.ClippingRegion>
                       </ui:Target>
                     </ui:GetOCRText.Target>
@@ -142,19 +142,19 @@
                     </ui:GetValue.Value>
                   </ui:GetValue>
                   <WriteLine DisplayName="Write Line" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[InvoiceDate]" />
-                  <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get Due Date" sap2010:WorkflowViewState.IdRef="GetOCRText_4">
+                  <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'AVL_AVView'" sap2010:WorkflowViewState.IdRef="GetOCRText_7">
                     <ui:GetOCRText.OCREngine>
                       <ActivityFunc x:TypeArguments="sd2:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
                         <ActivityFunc.Argument>
                           <DelegateInArgument x:TypeArguments="sd2:Image" Name="Image" />
                         </ActivityFunc.Argument>
-                        <ui:GoogleOCR FilterRegion="{x:Null}" Text="{x:Null}" AllowedCharacters="" DeniedCharacters="" ExtractWords="False" sap2010:WorkflowViewState.IdRef="GoogleOCR_4" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="2" />
+                        <ui:GoogleOCR FilterRegion="{x:Null}" Text="{x:Null}" AllowedCharacters="" DeniedCharacters="" ExtractWords="False" sap2010:WorkflowViewState.IdRef="GoogleOCR_7" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="2" />
                       </ActivityFunc>
                     </ui:GetOCRText.OCREngine>
                     <ui:GetOCRText.Target>
-                      <ui:Target Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="206530508b902f13919f38c1c5f6a535" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='AmeeraTelInc.pdf - Adobe Reader' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7cddfc0ceee07a4bdb02b78ce4dad5cd" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='AmeeraTelInc.pdf - Adobe Reader' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;" WaitForReady="INTERACTIVE">
                         <ui:Target.ClippingRegion>
-                          <ui:Region Rectangle="570, 324, 80, 27" />
+                          <ui:Region Rectangle="590, 337, 82, 24" />
                         </ui:Target.ClippingRegion>
                       </ui:Target>
                     </ui:GetOCRText.Target>
@@ -165,7 +165,7 @@
                   <WriteLine DisplayName="Write Line" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[DueDate]" />
                   <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Description" sap2010:WorkflowViewState.IdRef="GetValue_4">
                     <ui:GetValue.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="84ae006187f5ee1d2678105ddaa6c8e4" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='AmeeraTelInc.pdf - Adobe Reader' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='5' role='row' /&gt;&lt;ctrl name='Seat Lease   February 1-28, 2019 ' role='text' /&gt;" WaitForReady="INTERACTIVE" />
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="84ae006187f5ee1d2678105ddaa6c8e4" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='AmeeraTelInc.pdf - Adobe Reader' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='5' role='row' /&gt;&lt;ctrl name='Seat Lease   *' role='text' /&gt;" WaitForReady="INTERACTIVE" />
                     </ui:GetValue.Target>
                     <ui:GetValue.Value>
                       <OutArgument x:TypeArguments="ui:GenericValue">[Description]</OutArgument>
@@ -202,13 +202,13 @@
         </Sequence>
         <FlowStep.Next>
           <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_3">
-            <ui:ReadCsvFile Encoding="{x:Null}" DataTable="[MyDataTable]" Delimitator="Comma" DisplayName="Read CSV" FilePath="BillTemplate.csv" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+            <ui:ReadCsvFile Encoding="{x:Null}" DataTable="[MyDataTable]" Delimitator="Comma" DisplayName="Read CSV" FilePath="C:\git\cAIpableDemoW3\AccountsPayable/BillTemplate.csv" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
             <FlowStep.Next>
               <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_2">
                 <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CompanyName,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,InvoiceNo,InvoiceDate,DueDate,&quot;&quot;,&quot;&quot;,Description,Qty,UnitAmount,&quot;430 - General Expenses&quot;,&quot;Tax on Sales (0%)&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;}]" DataTable="[MyDataTable]" DisplayName="Add Details to CSV file" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                 <FlowStep.Next>
                   <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_5">
-                    <ui:AppendCsvFile Encoding="{x:Null}" DataTable="[MyDataTable]" Delimitator="Comma" DisplayName="Append To CSV" FilePath="BillTemplate.csv" sap2010:WorkflowViewState.IdRef="AppendCsvFile_1" />
+                    <ui:AppendCsvFile Encoding="{x:Null}" DataTable="[MyDataTable]" Delimitator="Comma" DisplayName="Append To CSV" FilePath="C:\git\cAIpableDemoW3\AccountsPayable/BillTemplate.csv" sap2010:WorkflowViewState.IdRef="AppendCsvFile_1" />
                   </FlowStep>
                 </FlowStep.Next>
               </FlowStep>
@@ -221,7 +221,11 @@
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
+<<<<<<< HEAD:AccountsPayable/PDFReaders/PDFReader-AmeeraTelInc/Main.xaml
     <sads:DebugSymbol.Symbol>d1FDOlxnaXRcY0FJcGFibGVEZW1vVzNcQWNjb3VudHNQYXlhYmxlXFBERlJlYWRlcnNcUERGUmVhZGVyLUFtZWVyYVRlbEluY1xNYWluLnhhbWxARQPhAQ8CAQFVCcoBFAIBDs0BDc0BxAECAQrQARHQAZYEAgEG0wEV0wHVAQIBAlYLXRQCAUxeC8kBGAIBD80BO80BSgIBDM0Bf80BkQECAQvQAa8D0AG+AwIBCNABPNABpAMCAQfTAUXTAVQCAQTTAY4B0wGgAQIBA1s4W1gCAU9YOVg/AgFNXqsBXrMBAgFKZBHGARwCARBlE2W1AQIBR2YTcSECAUNyE3J8AgFBcxOGASMCATiHAROHAXoCATaIAROPASECATKQAROQAXwCATCRAROkASMCASelAROlAXgCASWmAROtASECASGuAROuAXwCAR+vARO2ASECARu3ARO3AXQCARm4ARO/ASECARXAARPAAXsCARPBARPFASMCARFleWWBAQIBSG9Gb1MCAURojAFohwYCAUZyanJ5AgFCfYwBfb4CAgFAhAFGhAFRAgE+eRl5hgICATmHAWqHAXcCATeNAUaNAVMCATOKAaYBigGHAwIBNZABapABeQIBMZsBjAGbAZ4CAgEvogFGogFPAgEtlwEZlwGGAgIBKKUBaqUBdQIBJqsBRqsBUwIBIqgBpgGoAZwDAgEkrgFqrgF5AgEgtAFGtAFLAgEcsQGmAbEBgAMCAR63AWq3AXECARq9AUa9AVICARa6AaYBugGCAwIBGMABasABeAIBFMEB9QHBAfkBAgESeYACeYMCAgE9ecEBecoBAgE7eeMBeegBAgE6lwGAApcBgwICASyXAcEBlwHKAQIBKpcB4wGXAegBAgEp</sads:DebugSymbol.Symbol>
+=======
+    <sads:DebugSymbol.Symbol>d2NDOlxnaXRcY0FJcGFibGVEZW1vVzNcQWNjb3VudHNQYXlhYmxlXFBERlJlYWRlcnNcUERGUmVhZGVyLUFtZWVyYVRlbEluY1xQREZSZWFkZXItQW1lZXJhVGVsSW5jLnhhbWxARQPdAQ8CAQFVCcYBFAIBDskBDckB6gECAQrMARHMAZYEAgEGzwEVzwH7AQIBAlYLXRQCAUxeC8UBGAIBD8kBO8kBSgIBDMkBf8kBtwECAQvMAa8DzAG+AwIBCMwBPMwBpAMCAQfPAUXPAVQCAQTPAY4BzwHGAQIBA1s4W6ABAgFPWDlYPwIBTV6rAV6zAQIBSmQRwgEcAgEQZRNltQECAUdmE20hAgFDbhNufAIBQW8TggEjAgE4gwETgwF6AgE2hAETiwEhAgEyjAETjAF8AgEwjQEToAEjAgEnoQEToQF4AgElogETqQEhAgEhqgETqgF8AgEfqwETsgEhAgEbswETswF0AgEZtAETuwEhAgEVvAETvAF7AgETvQETwQEjAgERZXllgQECAUhrRmtTAgFEaKYBaOsCAgFGbmpueQIBQnmMAXm+AgIBQIABRoABUQIBPnUZdYYCAgE5gwFqgwF3AgE3iQFGiQFTAgEzhgGmAYYBhwMCATWMAWqMAXkCATGXAYwBlwGeAgIBL54BRp4BTwIBLZMBGZMBhgICASihAWqhAXUCASanAUanAVMCASKkAaYBpAGJAwIBJKoBaqoBeQIBILABRrABSwIBHK0BpgGtAYADAgEeswFqswFxAgEauQFGuQFSAgEWtgGmAbYBggMCARi8AWq8AXgCARS9AfUBvQH5AQIBEnWAAnWDAgIBPXXBAXXKAQIBO3XjAXXoAQIBOpMBgAKTAYMCAgEskwHBAZMBygECASqTAeMBkwHoAQIBKQ==</sads:DebugSymbol.Symbol>
+>>>>>>> 9b85748392fe1e00f32d26b89b45f063a6e249de:AccountsPayable/PDFReaders/PDFReader-AmeeraTelInc/PDFReader-AmeeraTelInc.xaml
   </Flowchart>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -235,13 +239,13 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="WriteLine_1" sap:VirtualizedContainerService.HintSize="314,61" />
-      <sap2010:ViewStateData Id="GoogleOCR_3" sap:VirtualizedContainerService.HintSize="200,22" />
-      <sap2010:ViewStateData Id="GetOCRText_3" sap:VirtualizedContainerService.HintSize="314,168" />
+      <sap2010:ViewStateData Id="GoogleOCR_6" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="GetOCRText_6" sap:VirtualizedContainerService.HintSize="314,168" />
       <sap2010:ViewStateData Id="WriteLine_2" sap:VirtualizedContainerService.HintSize="314,61" />
       <sap2010:ViewStateData Id="GetValue_2" sap:VirtualizedContainerService.HintSize="314,106" />
       <sap2010:ViewStateData Id="WriteLine_3" sap:VirtualizedContainerService.HintSize="314,61" />
-      <sap2010:ViewStateData Id="GoogleOCR_4" sap:VirtualizedContainerService.HintSize="200,22" />
-      <sap2010:ViewStateData Id="GetOCRText_4" sap:VirtualizedContainerService.HintSize="314,168" />
+      <sap2010:ViewStateData Id="GoogleOCR_7" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="GetOCRText_7" sap:VirtualizedContainerService.HintSize="314,168" />
       <sap2010:ViewStateData Id="WriteLine_4" sap:VirtualizedContainerService.HintSize="314,61" />
       <sap2010:ViewStateData Id="GetValue_4" sap:VirtualizedContainerService.HintSize="314,106" />
       <sap2010:ViewStateData Id="WriteLine_5" sap:VirtualizedContainerService.HintSize="314,61" />

@@ -730,10 +730,11 @@
       ]
     },
     "NPOI/2.4.1": {
-      "sha512": "85790/CY9z4DCU1KLpcdLSqaqaqmQOenTqXJfcsYK8LIKNAAoTgjT5LYLbORgdwAd63sbaJiCfB1SIn/dAXrJw==",
+      "sha512": "k6KgsGWQpODQcIo7SwTw4j0be6qILTQlk7xKMEPQjp1Bz3+YaUZSvQ/ePG5vcLKnzGDgGGN1TccvYccmrZU53g==",
       "type": "package",
       "path": "npoi/2.4.1",
       "files": [
+        ".signature.p7s",
         "LICENSE",
         "Read Me.txt",
         "lib/NPOI.xml",
@@ -762,10 +763,11 @@
       ]
     },
     "SharpZipLib/1.0.0": {
-      "sha512": "YuYztmY3jEb21F6e5LIPHJjApdtzdCPQ284UzsCKNfkgW71bukFHJES6RbKi+wm053XzFg0LX5/2vj/9gl8F/g==",
+      "sha512": "38egGevtPMQn/6olZZUteKUC7+BD47LdCGKo9Vyj17+HWDwiqPXsyJu55q9WSybhwVKwt0q2FLhiuJjZfQpsHw==",
       "type": "package",
       "path": "sharpziplib/1.0.0",
       "files": [
+        ".signature.p7s",
         "lib/net45/ICSharpCode.SharpZipLib.dll",
         "lib/net45/ICSharpCode.SharpZipLib.xml",
         "lib/netstandard2.0/ICSharpCode.SharpZipLib.dll",
@@ -1053,7 +1055,11 @@
       "projectUniqueName": "PDFReader-AmeeraTelInc",
       "projectName": "PDFReader-AmeeraTelInc",
       "projectPath": "C:\\git\\cAIpableDemoW3\\AccountsPayable\\PDFReaders\\PDFReader-AmeeraTelInc\\.local",
+<<<<<<< HEAD
       "packagesPath": "C:\\Users\\DataScientists\\.nuget\\packages\\",
+=======
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+>>>>>>> 9b85748392fe1e00f32d26b89b45f063a6e249de
       "outputPath": "C:\\git\\cAIpableDemoW3\\AccountsPayable\\PDFReaders\\PDFReader-AmeeraTelInc\\.local"
     },
     "frameworks": {
