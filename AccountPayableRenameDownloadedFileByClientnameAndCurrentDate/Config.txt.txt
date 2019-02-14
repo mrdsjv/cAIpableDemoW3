@@ -1,0 +1,5 @@
+UsernameForOnBoardClientRegistration: smith.james.ut@gmail.com
+PasswordForOnBoardClientRegistration: 938bhM9g7i*i
+ClientID: 540714922796-i5mcsleps3cqvp7lc14htjfd98nbtne5.apps.googleusercontent.com
+ClientSecret: xo9a7uPu0uCorBXBojcxGVUl
+SpreadSheetID: 1LgvGFPeFuIU9bJvFWLypbGg_e0wVEtelz8qvaxqjxTE

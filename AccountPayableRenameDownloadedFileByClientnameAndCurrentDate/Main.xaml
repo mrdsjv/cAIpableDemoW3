@@ -1,0 +1,606 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Main_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:snm="clr-namespace:System.Net.Mail;assembly=System"
+ xmlns:ss="clr-namespace:System.Security;assembly=mscorlib"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Plugin.Workflow</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>UiPath.PDF</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart DisplayName="TheWholeProcess" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="ss:SecureString" Name="AP_Password" />
+      <Variable x:TypeArguments="x:String" Name="AP_Email" />
+      <Variable x:TypeArguments="x:String" Name="String_AP_Password" />
+      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="MailMessage" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="UserName" />
+      <Variable x:TypeArguments="x:String" Name="ConfigFiles" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="Password" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="CurrentDate" />
+    </Flowchart.Variables>
+    <Flowchart.StartNode>
+      <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_11">
+        <ui:Callout Content="[&quot;Hi! I am ROBOT for Account Payable&quot; + Environment.NewLine + &quot;And I am going to process the WorkFlow&quot;]" DisplayName="Callout 'list item  cAIpable'" sap2010:WorkflowViewState.IdRef="Callout_1" Timer="5000">
+          <ui:Callout.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e21a01294a5a650f831aec419c0ab715" Selector="&lt;wnd app='explorer.exe' cls='Progman' title='Program Manager' /&gt;&lt;wnd cls='SysListView32' title='FolderView' /&gt;&lt;ctrl name='Desktop' role='list' /&gt;&lt;ctrl name='ROBOT' role='list item' /&gt;" WaitForReady="INTERACTIVE" />
+          </ui:Callout.Target>
+          <ui:Callout.Title>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" Value="" />
+            </InArgument>
+          </ui:Callout.Title>
+        </ui:Callout>
+        <FlowStep.Next>
+          <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_10">
+            <ui:Callout Content="I am going to get the credential of Account Payable's gmail account" DisplayName="Callout 'list item  cAIpable'" sap2010:WorkflowViewState.IdRef="Callout_2" Timer="4000">
+              <ui:Callout.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="aa2d2a56ba9559546fb4621a8a670dd2" Selector="&lt;wnd app='explorer.exe' cls='Progman' title='Program Manager' /&gt;&lt;wnd cls='SysListView32' title='FolderView' /&gt;&lt;ctrl name='Desktop' role='list' /&gt;&lt;ctrl name='ROBOT' role='list item' /&gt;" WaitForReady="INTERACTIVE" />
+              </ui:Callout.Target>
+              <ui:Callout.Title>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:Callout.Title>
+            </ui:Callout>
+            <FlowStep.Next>
+              <FlowStep x:Name="__ReferenceID7" sap2010:WorkflowViewState.IdRef="FlowStep_15">
+                <Sequence DisplayName="Read Config file" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <ui:ReadTextFile Content="[ConfigFiles]" DisplayName="Read Text File" FileName="Config.txt.txt" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+                  <Assign sap2010:WorkflowViewState.IdRef="Assign_6">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="ui:GenericValue">[UserName]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="ui:GenericValue">[System.Text.RegularExpressions.Regex.Match(ConfigFiles,"(?&lt;=UsernameForOnBoardClientRegistration: ).+").ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap2010:WorkflowViewState.IdRef="Assign_7">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="ui:GenericValue">[Password]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="ui:GenericValue">[System.Text.RegularExpressions.Regex.Match(ConfigFiles,"(?&lt;=PasswordForOnBoardClientRegistration: ).+").ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <WriteLine DisplayName="Write Line" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[UserName + Password]" />
+                </Sequence>
+                <FlowStep.Next>
+                  <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_9">
+                    <ui:Callout Content="Now I am going to read your emails of INOICVES" DisplayName="Callout 'list item  cAIpable'" sap2010:WorkflowViewState.IdRef="Callout_3" Timer="5000">
+                      <ui:Callout.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e21a01294a5a650f831aec419c0ab715" Selector="&lt;wnd app='explorer.exe' cls='Progman' title='Program Manager' /&gt;&lt;wnd cls='SysListView32' title='FolderView' /&gt;&lt;ctrl name='Desktop' role='list' /&gt;&lt;ctrl name='ROBOT' role='list item' /&gt;" WaitForReady="INTERACTIVE" />
+                      </ui:Callout.Target>
+                      <ui:Callout.Title>
+                        <InArgument x:TypeArguments="x:String">
+                          <Literal x:TypeArguments="x:String" Value="" />
+                        </InArgument>
+                      </ui:Callout.Title>
+                    </ui:Callout>
+                    <FlowStep.Next>
+                      <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_5">
+                        <ui:GetIMAPMailMessages TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="Read mail" Email="[UserName]" EnableSSL="True" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" MailFolder="Inbox" MarkAsRead="False" Messages="[MailMessage]" OnlyUnreadMessages="True" Password="[Password]" Port="993" SecureConnection="Auto" Server="imap.gmail.com" Top="10" />
+                        <FlowStep.Next>
+                          <FlowStep x:Name="__ReferenceID5" sap2010:WorkflowViewState.IdRef="FlowStep_14">
+                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="CreateFoldersForAttachment.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                              </ui:InvokeWorkflowFile.Arguments>
+                            </ui:InvokeWorkflowFile>
+                            <FlowStep.Next>
+                              <FlowStep x:Name="__ReferenceID6" sap2010:WorkflowViewState.IdRef="FlowStep_13">
+                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="CreateInsideFolder.xaml">
+                                  <ui:InvokeWorkflowFile.Arguments>
+                                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                  </ui:InvokeWorkflowFile.Arguments>
+                                </ui:InvokeWorkflowFile>
+                                <FlowStep.Next>
+                                  <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_4">
+                                    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="Scan Each Mails" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[MailMessage]">
+                                      <ui:ForEach.Body>
+                                        <ActivityAction x:TypeArguments="snm:MailMessage">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="Mail" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Body" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                                            <If Condition="[Mail.Subject.Contains(&quot;nvoice&quot;)]" sap2010:WorkflowViewState.IdRef="If_3">
+                                              <If.Then>
+                                                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                                  <ui:Callout Content="I have found the email of invoice" DisplayName="Callout 'list item  cAIpable'" sap2010:WorkflowViewState.IdRef="Callout_4" Timer="5000">
+                                                    <ui:Callout.Target>
+                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="99e4971ddf4605a07874a54dc1b38c53" Selector="&lt;wnd app='explorer.exe' cls='Progman' title='Program Manager' /&gt;&lt;wnd cls='SysListView32' title='FolderView' /&gt;&lt;ctrl name='Desktop' role='list' /&gt;&lt;ctrl name='ROBOT' role='list item' /&gt;" WaitForReady="INTERACTIVE" />
+                                                    </ui:Callout.Target>
+                                                    <ui:Callout.Title>
+                                                      <InArgument x:TypeArguments="x:String">
+                                                        <Literal x:TypeArguments="x:String" Value="" />
+                                                      </InArgument>
+                                                    </ui:Callout.Title>
+                                                  </ui:Callout>
+                                                  <If Condition="[Mail.Attachments.Any = true]" sap2010:WorkflowViewState.IdRef="If_2">
+                                                    <If.Then>
+                                                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                                        <ui:ForEach x:TypeArguments="snm:Attachment" CurrentIndex="{x:Null}" DisplayName="For Each" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Mail.Attachments]">
+                                                          <ui:ForEach.Body>
+                                                            <ActivityAction x:TypeArguments="snm:Attachment">
+                                                              <ActivityAction.Argument>
+                                                                <DelegateInArgument x:TypeArguments="snm:Attachment" Name="item" />
+                                                              </ActivityAction.Argument>
+                                                              <Sequence DisplayName="Body" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                                                                <If Condition="[Path.GetExtension( item.Name) = &quot;.pdf&quot;]" sap2010:WorkflowViewState.IdRef="If_1">
+                                                                  <If.Then>
+                                                                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                                                      <Sequence.Variables>
+                                                                        <Variable x:TypeArguments="x:String" Name="PDFStatus" />
+                                                                        <Variable x:TypeArguments="ui:GenericValue" Name="FileName" />
+                                                                        <Variable x:TypeArguments="ui:GenericValue" Name="SenderEmail" />
+                                                                        <Variable x:TypeArguments="ui:GenericValue" Name="SenderName" />
+                                                                      </Sequence.Variables>
+                                                                      <ui:Callout Content="The attachment is in PDF format and now I will sortout whether its native or scaned PDF format" DisplayName="Callout 'list item  cAIpable'" sap2010:WorkflowViewState.IdRef="Callout_5" Timer="5000">
+                                                                        <ui:Callout.Target>
+                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0da248acea98df10dd01d3356a350242" Selector="&lt;wnd app='explorer.exe' cls='Progman' title='Program Manager' /&gt;&lt;wnd cls='SysListView32' title='FolderView' /&gt;&lt;ctrl name='Desktop' role='list' /&gt;&lt;ctrl name='ROBOT' role='list item' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                        </ui:Callout.Target>
+                                                                        <ui:Callout.Title>
+                                                                          <InArgument x:TypeArguments="x:String">
+                                                                            <Literal x:TypeArguments="x:String" Value="" />
+                                                                          </InArgument>
+                                                                        </ui:Callout.Title>
+                                                                      </ui:Callout>
+                                                                      <Assign sap2010:WorkflowViewState.IdRef="Assign_3">
+                                                                        <Assign.To>
+                                                                          <OutArgument x:TypeArguments="ui:GenericValue">[FileName]</OutArgument>
+                                                                        </Assign.To>
+                                                                        <Assign.Value>
+                                                                          <InArgument x:TypeArguments="ui:GenericValue">[Path.GetFileName( item.ToString)]</InArgument>
+                                                                        </Assign.Value>
+                                                                      </Assign>
+                                                                      <ui:ReadPDFText DisplayName="Read PDF Text" FileName="[item.ToString]" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" Range="All" Text="[PDFStatus]" />
+                                                                      <Assign sap2010:WorkflowViewState.IdRef="Assign_9">
+                                                                        <Assign.To>
+                                                                          <OutArgument x:TypeArguments="ui:GenericValue">[SenderName]</OutArgument>
+                                                                        </Assign.To>
+                                                                        <Assign.Value>
+                                                                          <InArgument x:TypeArguments="ui:GenericValue">[Mail.From.DisplayName]</InArgument>
+                                                                        </Assign.Value>
+                                                                      </Assign>
+                                                                      <Assign sap2010:WorkflowViewState.IdRef="Assign_4">
+                                                                        <Assign.To>
+                                                                          <OutArgument x:TypeArguments="ui:GenericValue">[SenderEmail]</OutArgument>
+                                                                        </Assign.To>
+                                                                        <Assign.Value>
+                                                                          <InArgument x:TypeArguments="ui:GenericValue">[Mail.From.Address]</InArgument>
+                                                                        </Assign.Value>
+                                                                      </Assign>
+                                                                      <Assign sap2010:WorkflowViewState.IdRef="Assign_8">
+                                                                        <Assign.To>
+                                                                          <OutArgument x:TypeArguments="ui:GenericValue">[CurrentDate]</OutArgument>
+                                                                        </Assign.To>
+                                                                        <Assign.Value>
+                                                                          <InArgument x:TypeArguments="ui:GenericValue">[System.DateTime.Now.ToString("dd-MM-yyyy")]</InArgument>
+                                                                        </Assign.Value>
+                                                                      </Assign>
+                                                                      <If Condition="[PDFStatus.Length&gt;0]" sap2010:WorkflowViewState.IdRef="If_4">
+                                                                        <If.Then>
+                                                                          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                                                            <ui:Callout Content="[&quot;I have got native pdf and I will save it in native pdf folder from &quot; + SenderEmail]" DisplayName="Callout 'list item  cAIpable'" sap2010:WorkflowViewState.IdRef="Callout_6" Timer="5000">
+                                                                              <ui:Callout.Target>
+                                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0da248acea98df10dd01d3356a350242" Selector="&lt;wnd app='explorer.exe' cls='Progman' title='Program Manager' /&gt;&lt;wnd cls='SysListView32' title='FolderView' /&gt;&lt;ctrl name='Desktop' role='list' /&gt;&lt;ctrl name='ROBOT' role='list item' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                              </ui:Callout.Target>
+                                                                              <ui:Callout.Title>
+                                                                                <InArgument x:TypeArguments="x:String">
+                                                                                  <Literal x:TypeArguments="x:String" Value="" />
+                                                                                </InArgument>
+                                                                              </ui:Callout.Title>
+                                                                            </ui:Callout>
+                                                                            <ui:SaveMailAttachments Attachments="{x:Null}" DisplayName="Save Attachments" FolderPath="[&quot;C:\Users\DataScientists\Desktop\APDermo\Email Attachment\PDF Attachment\Native PDF\&quot;+SenderName+CurrentDate]" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_1" Message="[Mail]" />
+                                                                          </Sequence>
+                                                                        </If.Then>
+                                                                        <If.Else>
+                                                                          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                                                            <ui:Callout Content="[&quot;I have got scaned pdf and I will save it in scaned pdf folder from &quot; + SenderEmail]" DisplayName="Callout 'list item  cAIpable'" sap2010:WorkflowViewState.IdRef="Callout_7" Timer="5000">
+                                                                              <ui:Callout.Target>
+                                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0da248acea98df10dd01d3356a350242" Selector="&lt;wnd app='explorer.exe' cls='Progman' title='Program Manager' /&gt;&lt;wnd cls='SysListView32' title='FolderView' /&gt;&lt;ctrl name='Desktop' role='list' /&gt;&lt;ctrl name='ROBOT' role='list item' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                              </ui:Callout.Target>
+                                                                              <ui:Callout.Title>
+                                                                                <InArgument x:TypeArguments="x:String">
+                                                                                  <Literal x:TypeArguments="x:String" Value="" />
+                                                                                </InArgument>
+                                                                              </ui:Callout.Title>
+                                                                            </ui:Callout>
+                                                                            <ui:SaveMailAttachments Attachments="{x:Null}" DisplayName="Save Attachments" FolderPath="[&quot;C:\Users\DataScientists\Desktop\APDermo\Email Attachment\PDF Attachment\Scaned PDF\&quot;+SenderName+CurrentDate]" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_2" Message="[Mail]" />
+                                                                          </Sequence>
+                                                                        </If.Else>
+                                                                      </If>
+                                                                    </Sequence>
+                                                                  </If.Then>
+                                                                  <If.Else>
+                                                                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                                                      <Sequence.Variables>
+                                                                        <Variable x:TypeArguments="ui:GenericValue" Name="SenderEmail1" />
+                                                                      </Sequence.Variables>
+                                                                      <Assign sap2010:WorkflowViewState.IdRef="Assign_5">
+                                                                        <Assign.To>
+                                                                          <OutArgument x:TypeArguments="ui:GenericValue">[SenderEmail1]</OutArgument>
+                                                                        </Assign.To>
+                                                                        <Assign.Value>
+                                                                          <InArgument x:TypeArguments="ui:GenericValue">[Mail.From.Address]</InArgument>
+                                                                        </Assign.Value>
+                                                                      </Assign>
+                                                                      <ui:Callout Content="[&quot;The attachment is not PDF, so I am going to save it in differtent folder from &quot; + SenderEmail1]" DisplayName="Callout 'list item  cAIpable'" sap2010:WorkflowViewState.IdRef="Callout_8" Timer="5000">
+                                                                        <ui:Callout.Target>
+                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0da248acea98df10dd01d3356a350242" Selector="&lt;wnd app='explorer.exe' cls='Progman' title='Program Manager' /&gt;&lt;wnd cls='SysListView32' title='FolderView' /&gt;&lt;ctrl name='Desktop' role='list' /&gt;&lt;ctrl name='ROBOT' role='list item' /&gt;" WaitForReady="INTERACTIVE" />
+                                                                        </ui:Callout.Target>
+                                                                        <ui:Callout.Title>
+                                                                          <InArgument x:TypeArguments="x:String">
+                                                                            <Literal x:TypeArguments="x:String" Value="" />
+                                                                          </InArgument>
+                                                                        </ui:Callout.Title>
+                                                                      </ui:Callout>
+                                                                      <ui:SaveMailAttachments Attachments="{x:Null}" DisplayName="Save Attachments" FolderPath="C:\cAIpableAutomationFiles\Email Attachments\Other attachment" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_3" Message="[Mail]" />
+                                                                    </Sequence>
+                                                                  </If.Else>
+                                                                </If>
+                                                              </Sequence>
+                                                            </ActivityAction>
+                                                          </ui:ForEach.Body>
+                                                        </ui:ForEach>
+                                                      </Sequence>
+                                                    </If.Then>
+                                                    <If.Else>
+                                                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                                        <ui:Callout Content="I didn't find any attachement in the email" DisplayName="Callout 'list item  cAIpable'" sap2010:WorkflowViewState.IdRef="Callout_9" Timer="5000">
+                                                          <ui:Callout.Target>
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="99e4971ddf4605a07874a54dc1b38c53" Selector="&lt;wnd app='explorer.exe' cls='Progman' title='Program Manager' /&gt;&lt;wnd cls='SysListView32' title='FolderView' /&gt;&lt;ctrl name='Desktop' role='list' /&gt;&lt;ctrl name='ROBOT' role='list item' /&gt;" WaitForReady="INTERACTIVE" />
+                                                          </ui:Callout.Target>
+                                                          <ui:Callout.Title>
+                                                            <InArgument x:TypeArguments="x:String">
+                                                              <Literal x:TypeArguments="x:String" Value="" />
+                                                            </InArgument>
+                                                          </ui:Callout.Title>
+                                                        </ui:Callout>
+                                                      </Sequence>
+                                                    </If.Else>
+                                                  </If>
+                                                </Sequence>
+                                              </If.Then>
+                                              <If.Else>
+                                                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                                  <ui:Callout Content="I didn't find any emails of invoice" DisplayName="Callout 'list item  cAIpable'" sap2010:WorkflowViewState.IdRef="Callout_10" Timer="5000">
+                                                    <ui:Callout.Target>
+                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="99e4971ddf4605a07874a54dc1b38c53" Selector="&lt;wnd app='explorer.exe' cls='Progman' title='Program Manager' /&gt;&lt;wnd cls='SysListView32' title='FolderView' /&gt;&lt;ctrl name='Desktop' role='list' /&gt;&lt;ctrl name='ROBOT' role='list item' /&gt;" WaitForReady="INTERACTIVE" />
+                                                    </ui:Callout.Target>
+                                                    <ui:Callout.Title>
+                                                      <InArgument x:TypeArguments="x:String">
+                                                        <Literal x:TypeArguments="x:String" Value="" />
+                                                      </InArgument>
+                                                    </ui:Callout.Title>
+                                                  </ui:Callout>
+                                                </Sequence>
+                                              </If.Else>
+                                            </If>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:ForEach.Body>
+                                    </ui:ForEach>
+                                  </FlowStep>
+                                </FlowStep.Next>
+                              </FlowStep>
+                            </FlowStep.Next>
+                          </FlowStep>
+                        </FlowStep.Next>
+                      </FlowStep>
+                    </FlowStep.Next>
+                  </FlowStep>
+                </FlowStep.Next>
+              </FlowStep>
+            </FlowStep.Next>
+          </FlowStep>
+        </FlowStep.Next>
+      </FlowStep>
+    </Flowchart.StartNode>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
+    <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID5</x:Reference>
+    <x:Reference>__ReferenceID6</x:Reference>
+    <x:Reference>__ReferenceID7</x:Reference>
+    <sads:DebugSymbol.Symbol>dzFDOlxVc2Vyc1xEYXRhU2NpZW50aXN0c1xEZXNrdG9wXEFQRGVybW9cTWFpbi54YW1sfUQD7gIPAgEBUQlaFgMBkAFdDWYaAwGLAWkRfBwCAXp/FYgBIgIBdYsBGYsBhgMCAWyOAR2SATUCAWqVASGZATkCAWicASXUAjICAQJTnAFT7QIDAZQBUR1RmgEDAZMBUfkBUf8BAwGSAVcPVz4DAZEBX6ABX/ECAwGPAV0hXWYDAY4BXcUBXcsBAwGNAWMTY0IDAYwBahNqpgEDAYcBaxNyHAMBggFzE3ocAgF9exN7hAECAXuBAagBgQH5AgIBeX8pf1kCAXh/uAF/vgECAXeFARuFAUoCAXaLAf8CiwGDAwIBdIsBe4sBhwECAXOLAcUCiwHKAgIBcosBgAKLAY8CAgFwiwHqAosB+gICAW+LAbMCiwG/AgIBbosB3AGLAeMBAgFtjgHJAY4B6gECAWuVAc0BlQHmAQIBaZwBvgGcAc0BAgFmogEr0QI2AgEDamJqcgMBigFqLGo7AwGIAXBFcLoBAwGFAW1GbVADAYMBeEV4ugEDAYABdUZ1UAIBfntqe4EBAgF8owEt0AIyAgEEowE7owFoAgEFpQExwAI8AgENwwIxzgI8AgEHpgEzrwFAAgFhsAEzvwI4AgEOxAIzzQJAAgEIqAHGAagBlwMCAWWmAUemAWoCAWSmAckBpgHPAQIBY6wBOawBaAIBYrABQbABYAIBD7IBN68CQgIBFrICN70CQgIBEMYCxgHGApcDAgEMxAJHxAJsAgELxALMAcQC0gECAQrKAjnKAmgCAQmzATmuAkYCARezAjm8AkYCARGzAcoBswHeAQIBX7kBP6sCSgIBGLUCzAG1Ap0DAgEVswJNswJ5AgEUswLYAbMC3gECARO5Aj+5Am4CARK6AUGqAkYCARm6AU+6AYMBAgEavAFFjgJQAgEqkQJFqAJQAgEbwwFHzAFUAgFazQFH1AFQAgFW1QFH1QHfAQIBUNYBR90BUAIBS94BR+UBUAIBRuYBR+0BUAIBQu4BR40CTAIBK5UCR5wCUAIBJZ0CR6YCVAIBIKcCR6cCqwICARzFAdoBxQGrAwIBXsMBW8MBuwECAV3DAZoCwwGgAgIBXMkBTckBfAIBW9IBedIBmwECAVnPAXrPAYQBAgFX1QHPAdUB3AECAVTVAXzVAY0BAgFS1QHEAdUByQECAVHbAXnbAZABAgFO2AF62AGGAQIBTOMBeeMBjAECAUngAXrgAYcBAgFH6wF56wGlAQIBRegBeugBhwECAUPuAVXuAW4CASzwAUv8AVYCATj/AUuLAlYCAS6aAnmaAowBAgEolwJ6lwKIAQIBJp8C2gGfAqsDAgEknQJbnQLIAQIBI50CpwKdAq0CAgEiowJNowJ8AgEhpwKgAqcCqAICAR6nAqABpwLfAQIBHfEBTfoBWgIBPfsBTfsB7AICATmAAk2JAloCATOKAk2KAuwCAgEv8wHgAfMBsQMCAUHxAWHxAcIBAgFA8QGhAvEBpwICAT/3AVP3AYIBAgE++wHhAvsB6QICATv7AaYB+wGgAgIBOoIC4AGCArEDAgE3gAJhgALCAQIBNoACoQKAAqcCAgE1hgJThgKCAQIBNIoC4QKKAukCAgExigKmAYoCoAICATA=</sads:DebugSymbol.Symbol>
+  </Flowchart>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="Callout_1" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Callout_2" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ReadTextFile_1" sap:VirtualizedContainerService.HintSize="314,59" />
+      <sap2010:ViewStateData Id="Assign_6" sap:VirtualizedContainerService.HintSize="314,60" />
+      <sap2010:ViewStateData Id="Assign_7" sap:VirtualizedContainerService.HintSize="314,60" />
+      <sap2010:ViewStateData Id="WriteLine_1" sap:VirtualizedContainerService.HintSize="314,61" />
+      <sap2010:ViewStateData Id="Sequence_11" sap:VirtualizedContainerService.HintSize="336,484">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Callout_3" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="GetIMAPMailMessages_1" sap:VirtualizedContainerService.HintSize="200,22">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_2" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_3" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Callout_4" sap:VirtualizedContainerService.HintSize="1501,106" />
+      <sap2010:ViewStateData Id="Callout_5" sap:VirtualizedContainerService.HintSize="697,106" />
+      <sap2010:ViewStateData Id="Assign_3" sap:VirtualizedContainerService.HintSize="697,60" />
+      <sap2010:ViewStateData Id="ReadPDFText_1" sap:VirtualizedContainerService.HintSize="697,60" />
+      <sap2010:ViewStateData Id="Assign_9" sap:VirtualizedContainerService.HintSize="697,60" />
+      <sap2010:ViewStateData Id="Assign_4" sap:VirtualizedContainerService.HintSize="697,60" />
+      <sap2010:ViewStateData Id="Assign_8" sap:VirtualizedContainerService.HintSize="697,60" />
+      <sap2010:ViewStateData Id="Callout_6" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="SaveMailAttachments_1" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="336,357">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Callout_7" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="SaveMailAttachments_2" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="336,357">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_4" sap:VirtualizedContainerService.HintSize="697,505" />
+      <sap2010:ViewStateData Id="Sequence_5" sap:VirtualizedContainerService.HintSize="719,1275">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Assign_5" sap:VirtualizedContainerService.HintSize="314,60" />
+      <sap2010:ViewStateData Id="Callout_8" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="SaveMailAttachments_3" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="Sequence_6" sap:VirtualizedContainerService.HintSize="336,457">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="1080,1423" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="1102,1547">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ForEach`1_1" sap:VirtualizedContainerService.HintSize="1118,1681" />
+      <sap2010:ViewStateData Id="Sequence_7" sap:VirtualizedContainerService.HintSize="1140,1805">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Callout_9" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Sequence_8" sap:VirtualizedContainerService.HintSize="336,230">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_2" sap:VirtualizedContainerService.HintSize="1501,1953" />
+      <sap2010:ViewStateData Id="Sequence_9" sap:VirtualizedContainerService.HintSize="1523,2223">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Callout_10" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Sequence_10" sap:VirtualizedContainerService.HintSize="336,230">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_3" sap:VirtualizedContainerService.HintSize="1884,2371" />
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="1906,2495">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ForEach`1_2" sap:VirtualizedContainerService.HintSize="200,51" />
+      <sap2010:ViewStateData Id="FlowStep_4">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">370,354.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,51</av:Size>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_13">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">370,234.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,51</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">470,285.5 470,354.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_14">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">370,134.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,51</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">470,185.5 470,234.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_5">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">40,449</av:Point>
+            <av:Size x:Key="ShapeSize">200,22</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">240,460 270,460 270,160 370,160</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_9">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">40,354.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,51</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">140,405.5 140,449</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_15">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">40,274.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,51</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">140,325.5 140,354.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_10">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">40,185.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,51</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">140,236.5 140,274.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_11">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">40,94.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,51</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">140,145.5 140,185.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Flowchart_2" sap:VirtualizedContainerService.HintSize="614,681">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <av:Point x:Key="ShapeLocation">110,2.5</av:Point>
+            <av:Size x:Key="ShapeSize">60,75</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">140,77.5 140,94.5</av:PointCollection>
+            <x:Double x:Key="Height">645</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="654,801">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+            <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

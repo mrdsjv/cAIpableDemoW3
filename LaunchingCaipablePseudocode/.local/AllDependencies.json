@@ -989,9 +989,9 @@
     "restore": {
       "projectUniqueName": "LaunchingCaipablePseudocode",
       "projectName": "LaunchingCaipablePseudocode",
-      "projectPath": "C:\\Users\\DataScientists\\Documents\\UiPath\\LaunchingCaipablePseudocode\\.local",
+      "projectPath": "C:\\git\\cAIpableDemoW3\\LaunchingCaipablePseudocode\\.local",
       "packagesPath": "C:\\Users\\DataScientists\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DataScientists\\Documents\\UiPath\\LaunchingCaipablePseudocode\\.local"
+      "outputPath": "C:\\git\\cAIpableDemoW3\\LaunchingCaipablePseudocode\\.local"
     },
     "frameworks": {
       "net461": {

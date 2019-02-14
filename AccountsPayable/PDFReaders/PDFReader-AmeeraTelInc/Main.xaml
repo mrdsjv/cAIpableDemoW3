@@ -101,7 +101,11 @@
                   <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Open the PDF" FileName="[file]" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
                   <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get CompanyName" sap2010:WorkflowViewState.IdRef="GetValue_1">
                     <ui:GetValue.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="443128c361d2c82f78110ff2affeba44" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='AmeeraTelInc.pdf - Adobe Reader' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl name='AmeeraTel Inc.   ' role='text' /&gt;" WaitForReady="INTERACTIVE" />
+                      <ui:Target Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4f8cebff6960fcb44b20e9bdd8b21765" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='AmeeraTelInc.pdf - Adobe Acrobat Reader DC' /&gt;&lt;wnd cls='AVL_AVView' idx='1' title='AVFlipContainerView' /&gt;&lt;wnd cls='AVL_AVView' idx='1' title='AVDocumentMainView' /&gt;&lt;wnd cls='AVL_AVView' idx='2' title='AVFlipContainerView' /&gt;&lt;wnd cls='AVL_AVView' idx='1' title='AVSplitterView' /&gt;&lt;wnd cls='AVL_AVView' title='AVSplitationPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVSplitterView' /&gt;&lt;wnd cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVScrollView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;" WaitForReady="INTERACTIVE">
+                        <ui:Target.ClippingRegion>
+                          <ui:Region Rectangle="87, 355, 288, 60" />
+                        </ui:Target.ClippingRegion>
+                      </ui:Target>
                     </ui:GetValue.Target>
                     <ui:GetValue.Value>
                       <OutArgument x:TypeArguments="ui:GenericValue">[CompanyName]</OutArgument>
@@ -217,7 +221,7 @@
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
-    <sads:DebugSymbol.Symbol>d1FGOlxnaXRcY0FJcGFibGVEZW1vVzNcQWNjb3VudHNQYXlhYmxlXFBERlJlYWRlcnNcUERGUmVhZGVyLUFtZWVyYVRlbEluY1xNYWluLnhhbWxARQPdAQ8CAQFVCcYBFAIBDskBDckBxAECAQrMARHMAZYEAgEGzwEVzwHVAQIBAlYLXRQCAUxeC8UBGAIBD8kBO8kBSgIBDMkBf8kBkQECAQvMAa8DzAG+AwIBCMwBPMwBpAMCAQfPAUXPAVQCAQTPAY4BzwGgAQIBA1s4W1gCAU9YOVg/AgFNXqsBXrMBAgFKZBHCARwCARBlE2W1AQIBR2YTbSECAUNuE258AgFBbxOCASMCATiDARODAXoCATaEAROLASECATKMAROMAXwCATCNAROgASMCASehAROhAXgCASWiAROpASECASGqAROqAXwCAR+rAROyASECARuzAROzAXQCARm0ARO7ASECARW8ARO8AXsCARO9ARPBASMCARFleWWBAQIBSGtGa1MCAURopgFo6wICAUZuam55AgFCeYwBeb4CAgFAgAFGgAFRAgE+dRl1hgICATmDAWqDAXcCATeJAUaJAVMCATOGAaYBhgGHAwIBNYwBaowBeQIBMZcBjAGXAZ4CAgEvngFGngFPAgEtkwEZkwGGAgIBKKEBaqEBdQIBJqcBRqcBUwIBIqQBpgGkAZwDAgEkqgFqqgF5AgEgsAFGsAFLAgEcrQGmAa0BgAMCAR6zAWqzAXECARq5AUa5AVICARa2AaYBtgGCAwIBGLwBarwBeAIBFL0B9QG9AfkBAgESdYACdYMCAgE9dcEBdcoBAgE7deMBdegBAgE6kwGAApMBgwICASyTAcEBkwHKAQIBKpMB4wGTAegBAgEp</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d1FDOlxnaXRcY0FJcGFibGVEZW1vVzNcQWNjb3VudHNQYXlhYmxlXFBERlJlYWRlcnNcUERGUmVhZGVyLUFtZWVyYVRlbEluY1xNYWluLnhhbWxARQPhAQ8CAQFVCcoBFAIBDs0BDc0BxAECAQrQARHQAZYEAgEG0wEV0wHVAQIBAlYLXRQCAUxeC8kBGAIBD80BO80BSgIBDM0Bf80BkQECAQvQAa8D0AG+AwIBCNABPNABpAMCAQfTAUXTAVQCAQTTAY4B0wGgAQIBA1s4W1gCAU9YOVg/AgFNXqsBXrMBAgFKZBHGARwCARBlE2W1AQIBR2YTcSECAUNyE3J8AgFBcxOGASMCATiHAROHAXoCATaIAROPASECATKQAROQAXwCATCRAROkASMCASelAROlAXgCASWmAROtASECASGuAROuAXwCAR+vARO2ASECARu3ARO3AXQCARm4ARO/ASECARXAARPAAXsCARPBARPFASMCARFleWWBAQIBSG9Gb1MCAURojAFohwYCAUZyanJ5AgFCfYwBfb4CAgFAhAFGhAFRAgE+eRl5hgICATmHAWqHAXcCATeNAUaNAVMCATOKAaYBigGHAwIBNZABapABeQIBMZsBjAGbAZ4CAgEvogFGogFPAgEtlwEZlwGGAgIBKKUBaqUBdQIBJqsBRqsBUwIBIqgBpgGoAZwDAgEkrgFqrgF5AgEgtAFGtAFLAgEcsQGmAbEBgAMCAR63AWq3AXECARq9AUa9AVICARa6AaYBugGCAwIBGMABasABeAIBFMEB9QHBAfkBAgESeYACeYMCAgE9ecEBecoBAgE7eeMBeegBAgE6lwGAApcBgwICASyXAcEBlwHKAQIBKpcB4wGXAegBAgEp</sads:DebugSymbol.Symbol>
   </Flowchart>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -254,7 +258,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="ForEach`1_1" sap:VirtualizedContainerService.HintSize="352,2354" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="200,51">
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="374,2578">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -327,7 +331,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="654,756" />
+      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="654,716" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
